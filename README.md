@@ -1,7 +1,24 @@
 # 🌊 SPACE CONNECT — Semáforo de Risco Hídrico
 
 > Monitoramento de enchentes com Arduino e tecnologia espacial  
-> FIAP · Global Solution 2026 · Edge Computing & Computer Systems
+> FIAP · Global Solution 2026 · Edge Computing & Computer Systems  
+> Prof. Paulo Marcotti · Prof. Lucas Demetrius
+
+---
+
+## 🎥 Vídeo de Demonstração
+
+📽️ **[Assistir ao vídeo do projeto](Video_Project_6.mp4)**
+
+> O vídeo demonstra o funcionamento completo do circuito no simulador Wokwi,
+> incluindo a variação dos níveis de risco, alternância de telas no LCD
+> e o comportamento dos LEDs em cada situação.
+
+---
+
+## 🔗 Simulação no Wokwi
+
+▶️ **[Acessar o projeto no Wokwi](https://wokwi.com/projects/466392293195588609)**
 
 ---
 
@@ -20,7 +37,7 @@
 
 O **Space Connect** é uma solução de monitoramento hídrico desenvolvida como parte da Global Solution 2026 da FIAP, com foco no tema **Indústria Espacial aplicada a desastres naturais**.
 
-O projeto simula um sistema embarcado de alerta de enchentes que utiliza sensores para monitorar o nível de chuva e as condições climáticas em tempo real, exibindo o risco em um painel visual (semáforo de LEDs) e em um display LCD — conectando a ideia ao ecossistema do Space Connect, que consome dados reais do satélite SWOT da NASA para antecipar enchentes com antecedência.
+O projeto simula um sistema embarcado de alerta de enchentes que utiliza sensores para monitorar o nível de chuva e as condições climáticas em tempo real, exibindo o risco em um painel visual (semáforo de LEDs) e em um display LCD — conectando a ideia ao ecossistema do Space Connect, que consome dados reais do satélite SWOT da NASA para antecipar enchentes com 24 a 72 horas de antecedência.
 
 ---
 
@@ -74,51 +91,54 @@ O **Serial Monitor** exibe logs a cada 2 segundos com todos os dados lidos.
 
 ```
 Arduino Uno
-├── A0          → Potenciômetro (SIG) — sensor de chuva
-├── D2          → DHT22 (DATA)
-├── A4          → LCD SDA (I2C)
-├── A5          → LCD SCL (I2C)
-├── D3          → Resistor 220Ω → LED Verde
-├── D4          → Resistor 220Ω → LED Amarelo
-├── D5          → Resistor 220Ω → LED Laranja
-├── D6          → Resistor 220Ω → LED Vermelho
-├── D7          → Botão NEXT (INPUT_PULLUP)
-├── 5V          → VCC (Pot, DHT22, LCD)
-└── GND         → GND (todos os componentes)
+├── A0  → Potenciômetro (SIG) — sensor de chuva
+├── D2  → DHT22 (DATA)
+├── A4  → LCD SDA (I2C)
+├── A5  → LCD SCL (I2C)
+├── D3  → Resistor 220Ω → LED Verde
+├── D4  → Resistor 220Ω → LED Amarelo
+├── D5  → Resistor 220Ω → LED Laranja
+├── D6  → Resistor 220Ω → LED Vermelho
+├── D7  → Botão NEXT (INPUT_PULLUP)
+├── 5V  → VCC (Potenciômetro, DHT22, LCD)
+└── GND → GND (todos os componentes)
 ```
 
 ---
 
 ## 🚀 Instruções de Execução
 
-### Simulação no Wokwi
+### Simulação no Wokwi (recomendado)
 
-1. Acesse [wokwi.com](https://wokwi.com) e crie um novo projeto **Arduino Uno**
-2. Substitua o conteúdo do arquivo `diagram.json` pelo arquivo disponível neste repositório
-3. Substitua o código do editor pelo arquivo `sketch_semaforo.ino`
-4. Clique em **▶ Play** para iniciar a simulação
-5. Gire o **potenciômetro** para simular o aumento do nível de chuva
-6. Pressione o **botão azul** para alternar entre as telas do LCD
-7. Observe os LEDs mudando conforme o nível de risco sobe
+1. Acesse o link: **[https://wokwi.com/projects/466392293195588609](https://wokwi.com/projects/466392293195588609)**
+2. Clique em **▶ Play** para iniciar a simulação
+3. Gire o **potenciômetro** para simular o aumento do nível de chuva
+4. Pressione o **botão azul** para alternar entre as telas do LCD
+5. Observe os LEDs mudando conforme o nível de risco sobe
 
-### Implementação Física (opcional)
+### Executar localmente
 
-1. Monte o circuito conforme o diagrama acima em uma protoboard
-2. Conecte o Arduino ao computador via USB
-3. Abra a Arduino IDE e instale as bibliotecas:
+1. Clone este repositório:
+```bash
+git clone https://github.com/seu-usuario/space-connect-edge.git
+```
+2. Abra o arquivo `sketch.ino` na Arduino IDE
+3. Instale as bibliotecas necessárias:
    - `LiquidCrystal_I2C` (by Frank de Brabander)
    - `DHT sensor library` (by Adafruit)
-4. Faça o upload do arquivo `sketch_semaforo.ino`
-5. Abra o **Serial Monitor** (9600 baud) para acompanhar os logs
+4. Monte o circuito conforme o `diagram.json`
+5. Faça o upload para o Arduino Uno
+6. Abra o **Serial Monitor** (9600 baud) para acompanhar os logs
 
 ---
 
 ## 📁 Arquivos do Repositório
 
 ```
-├── sketch_semaforo.ino     → Código fonte Arduino
-├── diagram_semaforo.json   → Diagrama do circuito (Wokwi)
-└── README.md               → Este arquivo
+├── sketch.ino            → Código fonte Arduino
+├── diagram.json          → Diagrama do circuito (Wokwi)
+├── Video_Project_6.mp4   → Vídeo de demonstração
+└── README.md             → Este arquivo
 ```
 
 ---
