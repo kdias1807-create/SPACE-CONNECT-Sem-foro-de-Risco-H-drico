@@ -6,13 +6,6 @@
 
 ---
 
-## 🎥 Vídeo de Demonstração
-
-📽️ **[Assistir ao vídeo do projeto](Video_Project_6.mp4)**
-
-> O vídeo demonstra o funcionamento completo do circuito no simulador Wokwi,
-> incluindo a variação dos níveis de risco, alternância de telas no LCD
-> e o comportamento dos LEDs em cada situação.
 
 ---
 
