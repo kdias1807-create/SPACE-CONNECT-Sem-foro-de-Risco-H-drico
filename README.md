@@ -131,7 +131,6 @@ git clone https://github.com/seu-usuario/space-connect-edge.git
 ```
 ├── sketch.ino            → Código fonte Arduino
 ├── diagram.json          → Diagrama do circuito (Wokwi)
-├── Video_Project_6.mp4   → Vídeo de demonstração
 └── README.md             → Este arquivo
 ```
 
