@@ -11,7 +11,7 @@
 
 ## 🔗 Simulação no Wokwi
 
-▶️ **[Space Connect  (1).zip](https://github.com/user-attachments/files/28773942/Space.Connect.1.zip)
+▶️ **[Acessar o projeto no Wokwi](https://wokwi.com/projects/466392293195588609)
 
 
 ---
