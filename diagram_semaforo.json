@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "author": "Space Connect",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno",   "id": "uno",          "top": 280, "left": 180, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "rain",         "top": 20,  "left": 20,  "attrs": { "value": "0" } },
+    { "type": "wokwi-dht22",         "id": "dht",          "top": 20,  "left": 200, "attrs": {} },
+    { "type": "wokwi-lcd1602",       "id": "lcd",          "top": 20,  "left": 370, "attrs": { "pins": "i2c" } },
+    { "type": "wokwi-led",           "id": "led_verde",    "top": 160, "left": 30,  "attrs": { "color": "green"  } },
+    { "type": "wokwi-led",           "id": "led_amarelo",  "top": 160, "left": 70,  "attrs": { "color": "yellow" } },
+    { "type": "wokwi-led",           "id": "led_laranja",  "top": 160, "left": 110, "attrs": { "color": "orange" } },
+    { "type": "wokwi-led",           "id": "led_vermelho", "top": 160, "left": 150, "attrs": { "color": "red"    } },
+    { "type": "wokwi-resistor",      "id": "r1",           "top": 180, "left": 18,  "attrs": { "value": "220" }, "rotate": 90 },
+    { "type": "wokwi-resistor",      "id": "r2",           "top": 180, "left": 58,  "attrs": { "value": "220" }, "rotate": 90 },
+    { "type": "wokwi-resistor",      "id": "r3",           "top": 180, "left": 98,  "attrs": { "value": "220" }, "rotate": 90 },
+    { "type": "wokwi-resistor",      "id": "r4",           "top": 180, "left": 138, "attrs": { "value": "220" }, "rotate": 90 },
+    { "type": "wokwi-pushbutton",    "id": "btn_next",     "top": 160, "left": 460, "attrs": { "color": "blue" } }
+  ],
+  "connections": [
+    ["rain:VCC",  "uno:5V",    "red",    []],
+    ["rain:GND",  "uno:GND.1", "black",  []],
+    ["rain:SIG",  "uno:A0",    "orange", []],
+
+    ["dht:VCC",   "uno:5V",    "red",    []],
+    ["dht:GND",   "uno:GND.1", "black",  []],
+    ["dht:SDA",   "uno:2",     "yellow", []],
+
+    ["lcd:VCC",   "uno:5V",    "red",    []],
+    ["lcd:GND",   "uno:GND.2", "black",  []],
+    ["lcd:SDA",   "uno:A4",    "blue",   []],
+    ["lcd:SCL",   "uno:A5",    "purple", []],
+
+    ["r1:1", "uno:3", "green",  []], ["r1:2", "led_verde:A",    "green",  []], ["led_verde:K",    "uno:GND.1", "black", []],
+    ["r2:1", "uno:4", "yellow", []], ["r2:2", "led_amarelo:A",  "yellow", []], ["led_amarelo:K",  "uno:GND.1", "black", []],
+    ["r3:1", "uno:5", "orange", []], ["r3:2", "led_laranja:A",  "orange", []], ["led_laranja:K",  "uno:GND.1", "black", []],
+    ["r4:1", "uno:6", "red",    []], ["r4:2", "led_vermelho:A", "red",    []], ["led_vermelho:K", "uno:GND.1", "black", []],
+
+    ["btn_next:1.l", "uno:7",     "blue",  []],
+    ["btn_next:2.l", "uno:GND.1", "black", []]
+  ]
+}
