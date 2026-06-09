@@ -37,7 +37,7 @@
 
 O **Space Connect** é uma solução de monitoramento hídrico desenvolvida como parte da Global Solution 2026 da FIAP, com foco no tema **Indústria Espacial aplicada a desastres naturais**.
 
-O projeto simula um sistema embarcado de alerta de enchentes que utiliza sensores para monitorar o nível de chuva e as condições climáticas em tempo real, exibindo o risco em um painel visual (semáforo de LEDs) e em um display LCD — conectando a ideia ao ecossistema do Space Connect, que consome dados reais do satélite SWOT da NASA para antecipar enchentes com 24 a 72 horas de antecedência.
+O projeto simula um sistema embarcado de alerta de enchentes que utiliza sensores para monitorar o nível de chuva e as condições climáticas em tempo real, exibindo o risco em um painel visual (semáforo de LEDs) e em um display LCD — conectando a ideia ao ecossistema do Space Connect, que consome dados reais do satélite SWOT da NASA para antecipar enchentes com antecedência.
 
 ---
 
